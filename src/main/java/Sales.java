@@ -20,10 +20,10 @@ public class Sales {
     }
 
 
-    public int srSales(long[] sales) {
+    public int averageSales(long[] sales) {
         int sum = sumSales(sales);
-        int sr = sales.length;
-        return sum / sr;
+        int averageSales = sales.length;
+        return sum / averageSales;
     }
 
     public int maxSales(long[] sales) {
@@ -37,23 +37,23 @@ public class Sales {
         return maxMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
 
-    public int srMoreSales(long[] sales) {
+    public int averageMoreSales(long[] sales) {
         int count = 0;
-        int sr = srSales(sales);
+        int averageSales = averageSales(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > sr) {
+            if (sales[i] > averageSales) {
                 count++;
             }
         }
         return count;
     }
 
-    public int srLessSales(long[] sales) {
-       int count = 0;
+    public int averageLessSales(long[] sales) {
+        int count = 0;
 
-        int sr = srSales(sales);
+        int averageSales = averageSales(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < sr) {
+            if (sales[i] < averageSales) {
                 count++;
             }
         }

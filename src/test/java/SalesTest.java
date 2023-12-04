@@ -26,12 +26,12 @@ public class SalesTest {
 
 
     @Test // среднее значение
-    public void srSales() {
+    public void averageSales() {
         Sales servis = new Sales();
-        long[] srSales = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        long[] averageSales = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
         long expectedMonth = 1;
-        long actualMonth = servis.srSales(srSales);
+        long actualMonth = servis.averageSales(averageSales);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
@@ -48,23 +48,23 @@ public class SalesTest {
     }
 
     @Test // выше среднего
-    public void srMoreSales() {
+    public void averageMoreSales() {
         Sales servis = new Sales();
-        long[] srMoreMSales = {33, 15, 16, 10, 13, 14, 15, 22, 50, 20, 32, 19};
+        long[] averageMoreSales = {33, 15, 16, 10, 13, 14, 15, 22, 50, 20, 32, 19};
 
         long expectedMonth = 4;
-        long actualMonth = servis.srMoreSales(srMoreMSales);
+        long actualMonth = servis.averageMoreSales(averageMoreSales);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
 
     @Test // ниже среднего
-    public void srLessSales() {
+    public void averageLessSales() {
         Sales servis = new Sales();
-        long[] srLessSales = {33, 15, 16, 10, 13, 14, 15, 22, 50, 20, 32, 19};
+        long[] averageLessSales = {33, 15, 16, 10, 13, 14, 15, 22, 50, 20, 32, 19};
 
         long expectedMonth = 8;
-        long actualMonth = servis.srLessSales(srLessSales);
+        long actualMonth = servis.averageLessSales(averageLessSales);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
